@@ -17,4 +17,4 @@ Take home backend assessment test
 
 ## Documentations
 For Engineering Design Docs, please refer to this 
-[Documentation](https://github.com/HarryChang30/node-kuncie-test/blob/master/engineering-design-docs.md)
+[Documentation](https://github.com/HarryChang30/node-kuncie-test/blob/master/PROJECT.md)
