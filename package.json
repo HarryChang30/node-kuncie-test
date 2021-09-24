@@ -1,0 +1,26 @@
+{
+  "name": "kuncie-checkout-service",
+  "version": "1.0.0",
+  "description": "Backend Kuncie Checkout Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarryChang30/node-kuncie-test.git"
+  },
+  "keywords": [
+    "kuncie",
+    "checkout-service"
+  ],
+  "author": "Harry Chang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarryChang30/node-kuncie-test/issues"
+  },
+  "homepage": "https://github.com/HarryChang30/node-kuncie-test#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
