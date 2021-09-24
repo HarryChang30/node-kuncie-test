@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Backend Kuncie Checkout Service",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "npm run test",
     "dev": "cross-env NODE_PATH=. NODE_ENV=development nodemon src/index.js",

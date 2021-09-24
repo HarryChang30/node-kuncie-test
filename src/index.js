@@ -1,9 +1,8 @@
-import dotenv  from 'dotenv';
-import app from '../src/app.js';
+require('dotenv').config();
 
-dotenv.config();
-
+const app = require('../src/app');
 const port = process.env.NODE_PORT || 3000;
+
 
 const server = app.listen(port, () => console.log(`Server is running on the port: ${port}`));
 
