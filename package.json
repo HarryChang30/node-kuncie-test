@@ -7,7 +7,7 @@
   "scripts": {
     "test": "npm run test",
     "dev": "cross-env NODE_PATH=. NODE_ENV=development nodemon src/index.js",
-    "lint": "eslint *.js"
+    "lint": "eslint --fix src/**/*.js"
   },
   "repository": {
     "type": "git",
