@@ -14,3 +14,7 @@ Take home backend assessment test
 
 ## Run Test
 1. `npm run test`
+
+## Documentations
+For Engineering Design Docs, please refer to this 
+[a link](https://github.com/HarryChang30/node-kuncie-test/engineering-design-docs.md)
