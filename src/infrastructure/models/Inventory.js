@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     qty: {
-      type: DataTypes.Integer,
+      type: DataTypes.INTEGER,
       allowNull: false
     }
   }, {
