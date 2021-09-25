@@ -7,6 +7,10 @@ const ProductRepository = {
 
   addProduct: (product) => {
     return db.products.create(product);
+  },
+
+  findByName: (product_name) => {
+    return db.products.findOne({ where: { product_name }});
   }
 };
 

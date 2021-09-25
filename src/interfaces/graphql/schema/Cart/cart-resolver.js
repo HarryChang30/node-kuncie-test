@@ -1,14 +1,14 @@
-// TODO: Change this into the repository
-const db = require('../../../../infrastructure/models/db');
+const GetAccumulatedPrice = require('../../../../application/Cart/GetAccumulatedPrice');
+const GetCart = require('../../../../application/Cart/GetCart');
 
 const CartResolver = {
   Query: {
     cart: (parent, args) => {
-      return db.carts.findAll({
-        where: {
-          user_id: args.user_id
-        }
-      });
+      return GetCart.ByUserId(args.user_id);
+    },
+    cartAccumulatedPrice: (parent, args) => {
+      const { items } = args;
+      return GetAccumulatedPrice.get(items);
     }
   },
   Mutation: {

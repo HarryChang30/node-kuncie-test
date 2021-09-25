@@ -12,7 +12,8 @@ const CartType = gql`
     }
 
     type Query{
-        cart(user_id:Int):CartType
+        cart(user_id:Int):[CartType]
+        cartAccumulatedPrice(items:[String]):Float
     }
 `;
 

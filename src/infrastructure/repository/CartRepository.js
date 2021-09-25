@@ -1,9 +1,9 @@
 const db = require('../models/db');
 
 const CartRepository = {
-  findAll: (id) => {
+  findAll: (user_id) => {
     return db.carts.findAll({
-      where: { user_id: id }
+      where: { user_id }
     });
   }
 };

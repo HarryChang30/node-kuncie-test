@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     items: {
       type: DataTypes.JSON
     },
-    actual_price: {
+    actual_prices: {
       type: DataTypes.DECIMAL(16, 2)
     },
     discount: {
