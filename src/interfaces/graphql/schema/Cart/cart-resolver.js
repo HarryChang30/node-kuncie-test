@@ -1,5 +1,6 @@
 const GetPrice = require('../../../../application/Cart/GetPrice');
 const GetCart = require('../../../../application/Cart/GetCart');
+const AddCart = require('../../../../application/Cart/AddCart');
 
 const CartResolver = {
   Query: {
@@ -14,12 +15,22 @@ const CartResolver = {
       const { items } = args;
       return GetPrice.discountPrice(items);
     },
-    finalPrice: (parent, args) => {
+    finalPrice: async (parent, args) => {
       const { items } = args;
       return GetPrice.finalPrice(items);
     }
   },
   Mutation: {
+    addCart: (parent, args) => {
+      const cart = {
+        user_id: args.user_id,
+        items: args.items,
+        actual_prices: args.actual_prices,
+        discount: args.discount,
+        final_prices: args.final_prices
+      };
+      return AddCart.Create(cart);
+    }
   }
 };
 

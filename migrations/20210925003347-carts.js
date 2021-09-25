@@ -22,6 +22,9 @@ module.exports = {
       },
       final_prices: {
         type: Sequelize.DataTypes.DECIMAL(16, 2)
+      },
+      is_checkout: {
+        type: Sequelize.DataTypes.BOOLEAN
       }
     });
   },

@@ -9,13 +9,24 @@ const CartType = gql`
         actual_prices: Float
         discount: Float
         final_prices: Float
+        is_checkout: Boolean
+    }
+
+    type ResponseCart{
+        actual_prices: Float
+        discount: Float
+        final_prices: Float
     }
 
     type Query{
         cart(user_id:Int):[CartType]
         cartAccumulatedPrice(items:[String]):Float
         discountPrice(items:[String]):Float
-        finalPrice(items:[String]):Float
+        finalPrice(items:[String]):ResponseCart
+    }
+
+    type Mutation{
+        addCart(user_id:Int!, items:[String!], actual_prices:Float!, discount: Float!, final_prices: Float!):CartType
     }
 `;
 

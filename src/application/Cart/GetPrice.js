@@ -44,8 +44,17 @@ const GetDiscountPrice = async (items) => {
 };
 
 const GetFinalPrice = async (items) => {
-  const result = await GetAccumulatedPrice(items) - await GetDiscountPrice(items);
-  return Math.round(result * 100) / 100;
+  const accumulated = await GetAccumulatedPrice(items);
+  const discount = await GetDiscountPrice(items);
+  const result = accumulated - discount;
+
+  console.log(accumulated, discount, result);
+
+  return {
+    actual_prices: Math.round(accumulated * 100) / 100,
+    discount: Math.round(discount * 100) / 100,
+    final_prices: Math.round(result * 100) / 100
+  };
 };
 
 module.exports = {

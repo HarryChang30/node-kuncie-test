@@ -5,6 +5,10 @@ const CartRepository = {
     return db.carts.findAll({
       where: { user_id }
     });
+  },
+
+  create: (cart) => {
+    return db.carts.create(cart);
   }
 };
 

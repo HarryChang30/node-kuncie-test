@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     final_prices: {
       type: DataTypes.DECIMAL(16, 2)
+    },
+    is_checkout: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     }
   }, {
     timestamps: false
