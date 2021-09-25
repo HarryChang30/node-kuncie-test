@@ -1,19 +1,21 @@
-// TODO: Change this into the repository
-const db = require('../../../../infrastructure/models/db');
+const CreateProduct = require('../../../../application/Product/CreateProduct');
+const GetProduct = require('../../../../application/Product/GetProduct');
 
 const ProductResolver = {
   Query: {
     product: (parent, args) => {
-      return db.products.findByPk(args.id);
+      return GetProduct.ById(args.id);
     }
   },
   Mutation: {
     addProduct: (parent, args) => {
-      return db.products.create({
+      const product = {
         product_name: args.product_name,
         price: args.price,
         sku_code: args.sku_code
-      });
+      };
+
+      return CreateProduct.create(product);
     }
   }
 };

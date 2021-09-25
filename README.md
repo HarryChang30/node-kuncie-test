@@ -23,7 +23,7 @@ Take home backend assessment test
 3. Undo all the migration file `npm run migrate:undo`
 
 ## Seeders
-1. Generating the seeder file `npx sequelize-cli seede:generate --name=<seed>`
+1. Generating the seeder file `npx sequelize-cli seed:generate --name=<seed>`
 2. Running the seeder file `npm run seed`
 3. Undo all the seeder file `npm run seed:undo`
 

@@ -1,26 +1,24 @@
-// TODO: Change this into the repository
-const db = require('../../../../infrastructure/models/db');
+const CreateInventory = require('../../../../application/Inventory/CreateInventory');
+const GetInventory = require('../../../../application/Inventory/GetInventory');
+const UpdateInventory = require('../../../../application/Inventory/UpdateInventory');
 
 const InventoryResolver = {
   Query: {
     inventory: (parent, args) => {
-      return db.inventories.findByPk(args.id);
+      return GetInventory.ByProductId(args.product_id);
     }
   },
   Mutation: {
     addInventory: (parent, args) => {
-      return db.inventories.create({
+      const inventory = {
         product_id: args.product_id,
         qty: args.qty
-      });
+      };
+      return CreateInventory.create(inventory);
     },
 
     updateQuantity: (parent, args) => {
-      return db.inventories.update({
-        qty: args.qty
-      }, {
-        where: { product_id: args.product_id }
-      });
+      return UpdateInventory.updateQuantity(args.product_id, args.qty);
     }
   }
 };
