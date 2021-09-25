@@ -1,7 +1,8 @@
 const express = require('express');
+const routes = require('./interfaces/routes');
 
 const app = express();
 
-app.get('/', (req, res) => res.status(200).json({ msg: 'Server is healthy' }));
+app.use(routes);
 
 module.exports = app;

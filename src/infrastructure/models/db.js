@@ -18,7 +18,9 @@ const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   }
 });
 
-let models = [];
+let models = [
+  require('./User')
+];
 
 //Initialize models
 models.forEach(model => {
