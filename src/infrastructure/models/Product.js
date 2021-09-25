@@ -1,11 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define('products', {
-    id: {
-      type: DataTypes.BIGINT,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
-    },
     product_name: {
       type: DataTypes.STRING,
       allowNull: false
@@ -18,5 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     }
+  }, {
+    timestamps: false
   });
 };

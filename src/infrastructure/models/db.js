@@ -19,7 +19,10 @@ const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
 });
 
 let models = [
-  require('./User')
+  require('./User'),
+  require('./Product'),
+  require('./Inventory'),
+  require('./Cart')
 ];
 
 //Initialize models

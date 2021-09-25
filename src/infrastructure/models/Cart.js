@@ -1,11 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define('carts', {
-    id: {
-      type: DataTypes.BIGINT,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
-    },
     user_id: {
       type: DataTypes.BIGINT,
       allowNull: false
@@ -22,5 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     final_prices: {
       type: DataTypes.DECIMAL(16, 2)
     }
+  }, {
+    timestamps: false
   });
 };

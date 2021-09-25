@@ -1,3 +1,4 @@
+// TODO: Change this into the repository
 const db = require('../../../../infrastructure/models/db');
 
 const UserResolver = {
@@ -8,7 +9,10 @@ const UserResolver = {
   },
   Mutation: {
     addUser: (parent, args) => {
-      return args.name;
+      return db.users.create({
+        name: args.name,
+        phone_number: args.phone_number
+      });
     }
   }
 };
