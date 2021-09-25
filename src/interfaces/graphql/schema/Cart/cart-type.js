@@ -14,6 +14,8 @@ const CartType = gql`
     type Query{
         cart(user_id:Int):[CartType]
         cartAccumulatedPrice(items:[String]):Float
+        discountPrice(items:[String]):Float
+        finalPrice(items:[String]):Float
     }
 `;
 

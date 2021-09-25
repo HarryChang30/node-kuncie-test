@@ -14,6 +14,11 @@ Take home backend assessment test
 ## Running on Local Development
 1. `npm run dev`
 
+## Server
+1. REST API Server `http://127.0.0.1:3000`
+2. GraphQL Server `http://127.0.0.1:3000/graphql`
+
+
 ## Run Test
 1. `npm run test`
 
