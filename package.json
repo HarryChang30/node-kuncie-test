@@ -6,7 +6,9 @@
   "scripts": {
     "test": "npm run test",
     "dev": "cross-env NODE_PATH=. NODE_ENV=development nodemon src/index.js",
-    "lint": "eslint --fix ***/**/*.js"
+    "lint": "eslint --fix ***/**/*.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo:all"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,7 @@
     "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "mysql2": "^2.3.0",
     "sequelize": "^6.6.5"
   }
 }

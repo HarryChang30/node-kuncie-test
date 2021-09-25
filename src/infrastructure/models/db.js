@@ -2,7 +2,11 @@ const Sequelize = require('Sequelize');
 
 const db = {};
 
-const sequelize = new Sequelize({
+const DB_NAME = process.env.DB_NAME || 'kuncie_db';
+const DB_USER = process.env.DB_USER || 'root';
+const DB_PASSWORD = process.env.DB_PASSWORD || '';
+
+const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   host: process.env.DB_HOST || '127.0.0.1',
   port: process.env.DB_PORT || '3306',
   dialect: 'mysql',

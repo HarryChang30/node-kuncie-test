@@ -2,20 +2,25 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    /**
-     * Add altering commands here.
-     *
-     * Example:
-     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-     */
+    queryInterface.createTable('products', {
+      id: {
+        type: Sequelize.DataTypes.BIGINT,
+        primaryKey: true,
+        autoIncrement: true,
+      },
+      product_name: {
+        type: Sequelize.DataTypes.STRING
+      },
+      price: {
+        type: Sequelize.DataTypes.DECIMAL(16, 2)
+      },
+      sku_code: {
+        type: Sequelize.DataTypes.STRING
+      },
+    });
   },
 
-  down: async (queryInterface, Sequelize) => {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
-     */
+  down: async (queryInterface) => {
+    queryInterface.dropTable('products');
   }
 };
