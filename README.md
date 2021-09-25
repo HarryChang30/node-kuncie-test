@@ -3,17 +3,30 @@
 Take home backend assessment test
 
 ## Pre-requisites
-1. Node v14.7.0 (LTS)
+1. Node >= v10.15.0 (recommend using the Node LTS version) 
 2. Express
 3. GraphQL
 4. MySQL
 
-## Running on Local Development
+## Installation
 1. `npm install`
-2. `npm run start:dev`
+
+## Running on Local Development
+1. `npm run dev`
 
 ## Run Test
 1. `npm run test`
+
+## Migration
+1. Generating the migration file `npx sequelize-cli migration:generate --name=<migration>`
+2. Running the migration file `npm run migrate`
+3. Undo all the migration file `npm run migrate:undo`
+
+## Seeders
+1. Generating the seeder file `npx sequelize-cli seede:generate --name=<seed>`
+2. Running the seeder file `npm run seed`
+3. Undo all the seeder file `npm run seed:undo`
+
 
 ## Documentations
 For Engineering Design Docs, please refer to this 
