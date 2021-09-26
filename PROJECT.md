@@ -23,12 +23,12 @@ Structure of project pattern in `src folder`
 ```
 
 `application` Resides all business logic and each use case needed in the services <br />
-`repository` Resides all of the Database Interaction such as CRUD operation should be inside the repository
-`infrastructure` Resides the lowest layer where this folder put most of the integration such as Database,Model, Repository, MessageQueue, HTTP Call, etc. 
-`interfaces` Resides all the controller REST API or GraphQL interfaces API (Schema - Type and Resolver)
-`test` Resides all test file
+`repository` Resides all of the Database Interaction such as CRUD operation should be inside the repository <br />
+`infrastructure` Resides the lowest layer where this folder put most of the integration such as Database,Model, Repository, MessageQueue, HTTP Call, etc. <br />
+`interfaces` Resides all the controller REST API or GraphQL interfaces API (Schema - Type and Resolver) <br />
+`test` Resides all test file <br />
 
-The goal idea of this implementation:
+The goal idea of this implementation: <br />
 ![alt text](https://github.com/HarryChang30/node-kuncie-test/blob/master/implementation.jpg)
 
 
