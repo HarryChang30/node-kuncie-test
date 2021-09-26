@@ -3,5 +3,5 @@
 const ProductRepository = require('../../infrastructure/repository/ProductRepository');
 
 module.exports = {
-  create: (product) => ProductRepository.create(product)
+  create: (product) => ProductRepository.addProduct(product)
 };
