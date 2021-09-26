@@ -28,7 +28,7 @@ Structure of project pattern in `src folder`
 `interfaces` Resides all the controller REST API or GraphQL interfaces API (Schema - Type and Resolver) <br />
 `test` Resides all test file <br />
 
-The goal idea of this implementation: <br />
+The goal idea of this implementation: <br /><br />
 ![alt text](https://github.com/HarryChang30/node-kuncie-test/blob/master/implementation.jpg)
 
 
