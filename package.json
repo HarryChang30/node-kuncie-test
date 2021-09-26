@@ -4,13 +4,13 @@
   "description": "Backend Kuncie Checkout Service",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test",
     "dev": "cross-env NODE_PATH=. NODE_ENV=development nodemon src/index.js",
     "lint": "eslint --fix ***/**/*.js",
     "migrate": "npx sequelize-cli db:migrate",
     "migrate:undo": "npx sequelize-cli db:migrate:undo:all",
     "seed": "npx sequelize-cli db:seed:all",
-    "seed:undo": "npx sequelize-cli db:seed:undo:all"
+    "seed:undo": "npx sequelize-cli db:seed:undo:all",
+    "test": "mocha \"test/**/**/*.test.js\""
   },
   "repository": {
     "type": "git",
@@ -27,9 +27,12 @@
   },
   "homepage": "https://github.com/HarryChang30/node-kuncie-test#readme",
   "devDependencies": {
+    "chai": "^4.3.4",
     "eslint": "^7.32.0",
+    "mocha": "^9.1.2",
     "nodemon": "^2.0.13",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "sinon": "^11.1.2"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
