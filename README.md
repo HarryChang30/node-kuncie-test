@@ -38,6 +38,13 @@ Take home backend engineering assessment test
 2. Running the seeder file `npm run seed`
 3. Undo all the seeder file `npm run seed:undo`
 
+## Lint
+1. Running the linter command `npm run lint`
+
+NB: <br /> 
+As This project is developed on Windows OS some weird behavior of linting appear in my VSCode <br />
+For Linux/UNIX users can change the configuration on `.eslintrc` files and setup the linebreak <br />
+Changing on this command steps `line-break: ['error', 'unix']` <br />
 
 ## Documentations
 For Engineering Design Docs, please refer to this 
