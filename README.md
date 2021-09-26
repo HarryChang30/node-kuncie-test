@@ -25,7 +25,7 @@ Take home backend assessment test
 ## Database Setup
 1. Login to MySQL `mysql -u root -p`
 2. Once it has login start creating the database using this command `CREATE DATABASE kuncie_db`
-3. Then you can run the command migration file and seeder file
+3. Then you can run the command migration file and seeder file locally
 
 
 ## Migration

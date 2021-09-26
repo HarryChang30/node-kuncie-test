@@ -31,6 +31,36 @@ Structure of project pattern in `src folder`
 The goal idea of this implementation: <br /><br />
 ![alt text](https://github.com/HarryChang30/node-kuncie-test/blob/master/implementation.jpg)
 
-TO-DO: 
+## GraphQL Implementation
+For implementation in GraphQL it is divided into two types where <br />
+1. Fetch `GET` data functionality is categorised as `Query Type`
+2. Any `POST/PUT/PATCH/DELETE` operation is categorised as `Mutation Type`
+
+## GraphQL API Schema
+1. Create User API `Mutation.addUser` <br />
+
+Query <br />
+```
+mutation addUser($name:String!, $phone_number:String!) {
+    addUser(name:$name, phone_number:$phone_number) {
+        id
+        name
+        phone_number
+    }
+}
+```
+
+GraphQL Variables <br />
+```
+{
+    "name": "Bobby",
+    "phone_number": "+62899019192012"
+}
+```
+
+## Database Design
+
+Another TO-DO: 
 1. Adding Data Validation in Domain folder
+2. Dockerfile for Containerized
 
