@@ -60,7 +60,7 @@ GraphQL Variables <br />
 
 ## Database Design
 
-Another TO-DO: 
+## TO-DO: 
 1. Adding Data Validation in Domain folder
 2. Dockerfile for Containerized
 
