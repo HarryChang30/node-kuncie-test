@@ -22,6 +22,12 @@ Take home backend assessment test
 ## Run Test
 1. `npm run test`
 
+## Database Setup
+1. Login to MySQL `mysql -u root -p`
+2. Once it has login start creating the database using this command `CREATE DATABASE kuncie_db`
+3. Then you can run the command migration file and seeder file
+
+
 ## Migration
 1. Generating the migration file `npx sequelize-cli migration:generate --name=<migration>`
 2. Running the migration file `npm run migrate`
