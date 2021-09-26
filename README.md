@@ -1,6 +1,6 @@
-# NodeJS Kuncie Backend Engineering Test
+# NodeJS Kuncie Backend
 
-Take home backend assessment test
+Take home backend engineering assessment test
 
 ## Pre-requisites
 1. Node >= v10.15.0 (recommend using the Node LTS version) 
