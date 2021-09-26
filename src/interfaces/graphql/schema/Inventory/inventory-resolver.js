@@ -7,7 +7,7 @@ const InventoryResolver = {
     inventory: (parent, args) => {
       return GetInventory.ByProductId(args.product_id);
     },
-    show: () => {
+    showInventory: () => {
       return GetInventory.ShowAll();
     }
   },

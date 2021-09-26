@@ -58,6 +58,44 @@ GraphQL Variables <br />
 }
 ```
 
+2. Get User `Query.user` <br />
+
+Query <br />
+```
+query user($id:ID!) {
+    user(id:$id) {
+        name
+        phone_number
+    }
+}
+```
+
+GraphQL Variables <br />
+```
+{
+    "id": 1
+}
+```
+
+3. Get All Inventory `Query.showInventory`
+Query <br />
+```
+query showInventory {
+  showInventory {
+    product_id
+    product_name
+    product_price
+    product_sku_code
+    qty
+  }
+}
+```
+
+GraphQL Variables <br />
+```
+{}
+```
+
 ## Database Design
 
 ## TO-DO: 

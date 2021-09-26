@@ -16,7 +16,7 @@ const InventoryType = gql`
 
     type Query{
         inventory(product_id:Int):InventoryType
-        show:[InventoryWithProductType]
+        showInventory:[InventoryWithProductType]
     }
 
     type Mutation{
