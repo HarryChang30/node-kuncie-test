@@ -1,6 +1,15 @@
 const db = require('../models/db');
 
 const InventoryRepository = {
+  findAll: () => {
+    return db.inventories.findAll({
+      include: {
+        model: db.products
+      },
+      attributes: ['product_id', 'product.price', 'product.sku_code', 'product.product_name', 'qty']
+    });
+  },
+
   findByProductId: (id) => {
     return db.inventories.findOne({ where: { product_id: id }});
   },

@@ -8,12 +8,12 @@ module.exports = {
         primaryKey: true,
         autoIncrement: true
       },
+      qty: {
+        type: Sequelize.DataTypes.INTEGER
+      },
       product_id: {
         type: Sequelize.DataTypes.BIGINT
       },
-      qty: {
-        type: Sequelize.DataTypes.INTEGER
-      }
     });
   },
 

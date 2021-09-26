@@ -1,5 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
-  return sequelize.define('products', {
+  const Products = sequelize.define('products', {
+    id: {
+      type: DataTypes.BIGINT,
+      primaryKey: true,
+      allowNull: false,
+    },
     product_name: {
       type: DataTypes.STRING,
       allowNull: false
@@ -15,4 +20,15 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false
   });
+
+  Products.associate = (models) => {
+    models.products.hasOne(models.inventories, {
+      foreignKey: {
+        name: 'product_id',
+        allowNull: false
+      }
+    });
+  };
+
+  return Products;
 };

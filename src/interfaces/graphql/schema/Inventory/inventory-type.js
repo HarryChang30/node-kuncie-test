@@ -6,8 +6,17 @@ const InventoryType = gql`
         qty: Int
     }
 
+    type InventoryWithProductType{
+        product_id: Int
+        product_name: String
+        product_price: Float
+        product_sku_code: String
+        qty: Int
+    }
+
     type Query{
         inventory(product_id:Int):InventoryType
+        show:[InventoryWithProductType]
     }
 
     type Mutation{
