@@ -77,7 +77,8 @@ GraphQL Variables <br />
 }
 ```
 
-3. Get All Inventory `Query.showInventory`
+3. Get All Inventory `Query.showInventory` <br />
+
 Query <br />
 ```
 query showInventory {
@@ -94,6 +95,90 @@ query showInventory {
 GraphQL Variables <br />
 ```
 {}
+```
+
+4. Get Final Price `Query.finalPrice` <br />
+
+Query <br />
+```
+query finalPrice($items:[String]) {
+  finalPrice(items:$items) {
+    actual_prices
+    discount
+    final_prices
+  }
+}
+```
+
+GraphQL Variables <br />
+```
+{
+  "items":[
+    "Macbook Pro",
+    "Raspberry Pi B"
+  ]
+}
+```
+
+5. Add Cart `Mutation.addCart` <br />
+
+Query <br />
+```
+query finalPrice($items:[String]) {
+  finalPrice(items:$items) {
+    actual_prices
+    discount
+    final_prices
+  }
+}
+```
+
+GraphQL Variables <br />
+```
+{
+  "items":[
+    "Macbook Pro",
+    "Raspberry Pi B"
+  ]
+}
+```
+
+6. Checkout Confirmation `Mutation.confirmation` <br />
+
+Query <br />
+```
+mutation confirmation($cart_id:Int!) {
+    confirmation(cart_id:$cart_id) {
+        is_checkout
+    }
+}
+```
+
+GraphQL Variables <br />
+```
+{
+    "cart_id": 8
+}
+```
+
+7. Get Product By Id `Query.product` <br />
+
+Query <br />
+```
+query product($id:ID) {
+    product(id: $id) {
+        product_name
+        price
+        sku_code
+    }
+}
+```
+
+GraphQL Variables <br />
+```
+{
+    "id": 2
+}
 ```
 
 ## Database Design
