@@ -6,7 +6,8 @@ const Cart = attributes({
     required: true
   }, 
   items: {
-    type: Object,
+    type: Array,
+    itemType: String,
   },
   actual_prices: {
     type: Number,
