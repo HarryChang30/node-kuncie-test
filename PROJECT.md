@@ -22,7 +22,7 @@ Structure of project pattern in `src folder`
             └───User
 ```
 
-`application` Resides all business logic and each use case needed in the services
+`application` Resides all business logic and each use case needed in the services <br />
 `repository` Resides all of the Database Interaction such as CRUD operation should be inside the repository
 `infrastructure` Resides the lowest layer where this folder put most of the integration such as Database,Model, Repository, MessageQueue, HTTP Call, etc. 
 `interfaces` Resides all the controller REST API or GraphQL interfaces API (Schema - Type and Resolver)
