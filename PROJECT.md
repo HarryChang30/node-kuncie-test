@@ -1,7 +1,7 @@
 # Engineering Design Documentation 
 
 Structure of project pattern in `src folder`
-
+```
 ├───application
 │   ├───Cart
 │   ├───Checkout
@@ -20,6 +20,7 @@ Structure of project pattern in `src folder`
             ├───Inventory
             ├───Product
             └───User
+```
 
 `application` Resides all business logic and each use case needed in the services
 `repository` Resides all of the Database Interaction such as CRUD operation should be inside the repository
