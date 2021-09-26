@@ -2,6 +2,7 @@ const gql = require('graphql-tag');
 
 const ProductType = gql`
     type ProductType{
+        id: ID
         product_name: String
         price: Float
         sku_code: String

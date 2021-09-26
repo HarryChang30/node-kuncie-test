@@ -21,7 +21,7 @@ const InventoryType = gql`
 
     type Mutation{
         addInventory(product_id:Int!, qty:Int!):InventoryType
-        updateQuantity(product_id:Int!, qty:Int!):InventoryType
+        updateQuantity(product_id:Int!, qty:Int!):String
     }
 `;
 

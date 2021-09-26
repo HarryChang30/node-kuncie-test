@@ -3,7 +3,6 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.BIGINT,
       primaryKey: true,
-      allowNull: false,
     },
     product_name: {
       type: DataTypes.STRING,

@@ -34,7 +34,7 @@ The goal idea of this implementation: <br /><br />
 ## GraphQL Implementation
 For implementation in GraphQL it is divided into two types where <br />
 1. Fetch `GET` data functionality is categorised as `Query Type`
-2. Any `POST/PUT/PATCH/DELETE` operation is categorised as `Mutation Type`
+2. Any `POST` operation is categorised as `Mutation Type`
 
 ## GraphQL API Schema
 1. Create User API `Mutation.addUser` <br />
@@ -167,6 +167,7 @@ Query <br />
 ```
 query product($id:ID) {
     product(id: $id) {
+        id
         product_name
         price
         sku_code
@@ -181,9 +182,64 @@ GraphQL Variables <br />
 }
 ```
 
-## Database Design
+8. Add Product `Mutation.addProduct` <br />
 
-## TO-DO: 
-1. Adding Data Validation in Domain folder
-2. Dockerfile for Containerized
+Query <br />
+```
+mutation addProduct($product_name:String!, $price:Float!, $sku_code:String!) {
+  addProduct(product_name:$product_name, price:$price, sku_code:$sku_code) {
+    id
+    product_name
+    price
+    sku_code
+  }
+}
+```
 
+GraphQL Variables <br />
+```
+{
+  "product_name": "Lenovo 15",
+  "price":4999.99,
+  "sku_code": "POS90XD"
+}
+```
+
+9. Add Inventory `Mutation.addInventory` <br />
+
+Query <br />
+```
+mutation addInventory($product_id:Int!, $qty:Int!) {
+  addInventory(product_id:$product_id, qty:$qty) {
+    product_id,
+    qty
+  }
+}
+```
+
+GraphQL Variables <br />
+```
+{
+  "product_id": 5,
+  "qty": 10
+}
+```
+
+10. Update Quantity Inventory `Mutation.updateQuantity` <br />
+
+Query <br />
+```
+mutation updateQuantity($product_id:Int!, $qty:Int!) {
+  updateQuantity(product_id:$product_id, qty:$qty)
+}
+```
+
+GraphQL Variables <br />
+```
+{
+  "product_id": 5,
+  "qty": 10
+}
+```
+
+Postman Collection: `https://www.getpostman.com/collections/5cd66eee68c276cb14f8`
