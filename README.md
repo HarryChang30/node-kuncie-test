@@ -4,9 +4,9 @@ Take home backend engineering assessment test
 
 ## Pre-requisites
 1. Node >= v10.15.0 (recommend using the Node LTS version) 
-2. Express
-3. GraphQL
-4. MySQL
+2. Express v4.17.1
+3. GraphQL v15.6.0
+4. MySQL v8.0.26
 
 ## Installation
 1. `npm install`
