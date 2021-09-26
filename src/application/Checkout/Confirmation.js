@@ -36,5 +36,5 @@ const ConfirmCheckout = async (cart_id) => {
 };
 
 module.exports = {
-  confirmation: (checkout_id) => ConfirmCheckout(checkout_id)
+  confirmation: (cart_id) => ConfirmCheckout(cart_id)
 };
