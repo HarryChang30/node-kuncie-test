@@ -4,6 +4,7 @@ const CartType = gql`
     scalar JSON
 
     type CartType{
+        id:ID
         user_id: Int
         items: JSON
         actual_prices: Float

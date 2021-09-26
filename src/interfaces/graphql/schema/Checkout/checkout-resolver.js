@@ -3,7 +3,7 @@ const CheckoutConfirmation = require('../../../../application/Checkout/Confirmat
 const CheckoutResolver = {
   Mutation: {
     confirmation: async (parent, args) => {
-      return await CheckoutConfirmation.confirmation(args.checkout_id);
+      return await CheckoutConfirmation.confirmation(args.cart_id);
     }
   }
 };

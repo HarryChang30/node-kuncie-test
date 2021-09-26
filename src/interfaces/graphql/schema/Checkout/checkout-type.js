@@ -6,7 +6,7 @@ const CheckoutType = gql`
     }
 
     type Mutation{
-        confirmation(checkout_id:Int!):CheckoutType
+        confirmation(cart_id:Int!):CheckoutType
     }
 `;
 
