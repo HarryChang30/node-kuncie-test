@@ -1,4 +1,5 @@
 const db = require('../models/db');
+const Cart = require('../../domain/Cart');
 
 const CartRepository = {
   findByPk: (cart_id) => {
@@ -11,8 +12,14 @@ const CartRepository = {
     });
   },
 
-  create: (cart) => {
-    return db.carts.create(cart);
+  create: (data) => {
+    const { errors } = new Cart(data).validate();
+
+    if (errors) {
+      throw new Error('ValidationError');
+    }
+
+    return db.carts.create(data);
   },
 
   update_confirmation_checkout: (cart_id) => {

@@ -56,6 +56,7 @@ describe('Add Cart', function() {
       }
 
       expect(error).to.not.null;
+      expect(error.message).to.eq('ValidationError');
     });
   });
 });

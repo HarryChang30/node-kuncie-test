@@ -43,7 +43,7 @@ describe('Create Product', function() {
       }
 
       expect(error).to.not.null;
-      expect(error.name).to.eq('SequelizeValidationError');
+      expect(error.message).to.eq('ValidationError');
     });
   });
 });

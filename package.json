@@ -43,6 +43,7 @@
     "graphql-tag": "^2.12.5",
     "graphql-tools": "^8.2.0",
     "mysql2": "^2.3.0",
-    "sequelize": "^6.6.5"
+    "sequelize": "^6.6.5",
+    "structure": "^2.0.1"
   }
 }

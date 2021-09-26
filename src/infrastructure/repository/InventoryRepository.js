@@ -1,4 +1,5 @@
 const db = require('../models/db');
+const Inventory = require('../../domain/Inventory');
 
 const InventoryRepository = {
   findAll: () => {
@@ -14,8 +15,14 @@ const InventoryRepository = {
     return db.inventories.findOne({ where: { product_id: id }});
   },
 
-  add: (inventory) => {
-    return db.inventories.create(inventory);
+  add: (data) => {
+    const { errors } = new Inventory(data).validate();
+
+    if (errors) {
+      throw new Error('ValidationError');
+    }
+
+    return db.inventories.create(data);
   },
 
   updateQty: (product_id, qty) => {
